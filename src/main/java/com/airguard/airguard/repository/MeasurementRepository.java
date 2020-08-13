@@ -11,6 +11,7 @@ public interface MeasurementRepository extends JpaRepository<Measurement, Intege
     List<Measurement> findAll();
     List<Measurement> findAllByUserIdOrderByIdDesc(User user);
     List<Measurement> findTop25ByCityIdOrderByIdDesc(City city);
+    List<Measurement> findTop17ByUserIdOrderByIdDesc(User user);
     Measurement findFirstByCityIdOrderByIdDesc(City city);
     Measurement findFirstByUserIdOrderByIdDesc(User user);
 }

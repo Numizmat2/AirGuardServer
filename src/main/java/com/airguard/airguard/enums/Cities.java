@@ -16,7 +16,8 @@ public enum Cities {
     RZESZOW("rzeszów"),
     OPOLE("opole"),
     ZIELONA_GORA("zielona góra"),
-    KOSZALIN("koszalin");
+    KOSZALIN("koszalin"),
+    OLSZTYN("olsztyn");
 
     private final String cityName;
     Cities(String cityName) { this.cityName = cityName;}

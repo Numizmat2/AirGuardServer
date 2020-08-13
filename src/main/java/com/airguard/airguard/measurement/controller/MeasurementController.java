@@ -51,4 +51,9 @@ public class MeasurementController {
     public MeasurmentResponseModel getLastMeasurementByCityName(@PathVariable String cityName) {
         return measurementService.getLastMeasurementByCityName(cityName);
     }
+
+    @GetMapping(value = "/city/recent")
+    public List<MeasurmentResponseModel> getRecentCitiesData() {
+        return measurementService.getRecentCityData();
+    }
 }

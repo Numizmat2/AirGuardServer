@@ -116,4 +116,12 @@ public class MeasurementService {
                 .map(MeasurmentResponseModel::new)
                 .collect(Collectors.toList());
     }
+
+    public List<MeasurmentResponseModel> getRecentCityData() {
+        return measurementRepository.findTop17ByUserIdOrderByIdDesc(null)
+                .stream()
+                .filter(result -> result.getValue() != "[]")
+                .map(MeasurmentResponseModel::new)
+                .collect(Collectors.toList());
+    }
 }
