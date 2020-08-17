@@ -40,7 +40,7 @@ public class AutomaticMeasurementsService {
                 gatherCitiesAirData();
             }
         };
-        timer.schedule(hourlyTask, 0L, 1000*60*60*6);
+        timer.schedule(hourlyTask, 0L, 1000*60*60*8);
     }
 
     public void gatherCitiesAirData() {
