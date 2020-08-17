@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.airguard.airguard.AirGuardApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.911 s - in com.airguard.airguard.AirGuardApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.622 s - in com.airguard.airguard.AirGuardApplicationTests
