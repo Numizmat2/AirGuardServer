@@ -65,9 +65,15 @@ public class AutomaticMeasurementsService {
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
-            var measurementValue = ((HashMap) parsedJsonMeasurement.get("current")).get("values").toString();
-            measurement.setValue(measurementValue);
-            measurementRepository.save(measurement);
+
+            assert parsedJsonMeasurement != null;
+            String message = parsedJsonMeasurement.get("message").toString();
+            if (!message.equals("API rate limit exceeded")) {
+                String measurementValue = ((HashMap) parsedJsonMeasurement.get("current")).get("values").toString();
+                measurement.setValue(measurementValue);
+                measurementRepository.save(measurement);
+            }
+
         });
     }
 
