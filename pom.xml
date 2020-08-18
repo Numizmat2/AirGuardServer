@@ -10,12 +10,12 @@
     </parent>
     <groupId>com.airguard</groupId>
     <artifactId>airguard</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>AirGuard</name>
     <description>Masters Degree Application</description>
 
     <properties>
-        <java.version>13</java.version>
+        <java.version>11</java.version>
         <start-class>com.airguard.airguard.AirGuardApplication</start-class>
     </properties>
 

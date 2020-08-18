@@ -67,8 +67,8 @@ public class AutomaticMeasurementsService {
             }
 
             assert parsedJsonMeasurement != null;
-            String message = parsedJsonMeasurement.get("message").toString();
-            if (!message.equals("API rate limit exceeded")) {
+            var message = parsedJsonMeasurement.get("message");
+            if (message != null && !message.toString().equals("API rate limit exceeded")) {
                 String measurementValue = ((HashMap) parsedJsonMeasurement.get("current")).get("values").toString();
                 measurement.setValue(measurementValue);
                 measurementRepository.save(measurement);
