@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.airguard</groupId>
     <artifactId>airguard</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.6-SNAPSHOT</version>
     <name>AirGuard</name>
     <description>Masters Degree Application</description>
 

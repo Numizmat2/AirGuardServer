@@ -40,7 +40,7 @@ public class AutomaticMeasurementsService {
                 gatherCitiesAirData();
             }
         };
-        timer.schedule(hourlyTask, 0L, 1000*60*60*8);
+        timer.schedule(hourlyTask, 1000L, 1000*60*60*8);
     }
 
     public void gatherCitiesAirData() {
@@ -68,7 +68,9 @@ public class AutomaticMeasurementsService {
 
             assert parsedJsonMeasurement != null;
             var message = parsedJsonMeasurement.get("message");
-            if (message != null && !message.toString().equals("API rate limit exceeded")) {
+            if (message != null && message.toString().equals("API rate limit exceeded")) {
+                System.out.println("API rate limit exceeded");
+            } else {
                 String measurementValue = ((HashMap) parsedJsonMeasurement.get("current")).get("values").toString();
                 measurement.setValue(measurementValue);
                 measurementRepository.save(measurement);
